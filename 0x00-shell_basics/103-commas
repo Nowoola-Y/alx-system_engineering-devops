@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type d -print | sed 's/.$//' | sed 's/^\.//' | sort -b -o -k1,1 -f | grep -v '^\.|^.' | sed 's/\.$//' | echo '\n'
